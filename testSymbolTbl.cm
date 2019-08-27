@@ -1,0 +1,33 @@
+/* A program to compute the factorial value of an integer */
+void s(int x[], int y){
+
+}
+
+void input(){}
+
+void main(int x[], int y) {
+    int main[1]; int fac;
+    void z;
+    void z;
+    fac = 2;
+    x = 0 + 9 + fac + fac[1] + input();
+    //have line number errors.
+    //once you return an error indicate operation type
+    z = input();
+    x = input();
+    {
+    int x;
+    }
+    {
+    int x;
+    }
+    fac  = 1;
+    while (input()) {
+        fac = fac * x;
+        x = x - 1;
+    }
+    output(fac);
+
+    return fac + 1;
+}
+int i;

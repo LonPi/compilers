@@ -1,0 +1,71 @@
+
+  0:     Load(LD)  6,0(0) 	load gp with maxaddress
+  1:     loadAddress(LDA)  5,0(6) 	copy to gp to fp
+  2:     store(ST)  0,0(0) 	clear location 0
+  4:     store(ST)  0,-1(5) 	store return
+  5:     IN  0,0,0 	input
+  6:     Load(LD)  7,-1(5) 	return to caller
+  7:     store(ST)  0,-1(5) 	store return
+  8:     Load(LD)  0,-2(5) 	load output value
+  9:     OUT  0,0,0 	output
+ 10:     Load(LD)  7,-1(5) 	return to caller
+  3:     loadAddress(LDA)  7,7(7) 	jump around i/o code
+ 12:     store(ST)  0,-1(5) 	store return
+ 13:     loadAddress(LDA)  0,-2(5) 	load id address
+ 14:     store(ST)  0,-4(5) 	op: push left
+ 15:     store(ST)  5,-5(5) 	push ofp
+ 16:     loadAddress(LDA)  5,-5(5) 	push frame
+ 17:     loadAddress(LDA)  0,1(7) 	load ac with ret ptr
+ 18:     loadAddress(LDA)  7,-15(7) 	jump to fun loc
+ 19:     Load(LD)  5,0(5) 	pop frame
+ 20:     Load(LD)  1,-4(5) 	op: load left
+ 21:     store(ST)  0,0(1) 	assign: store value
+ 22:     loadAddress(LDA)  0,-3(5) 	load id address
+ 23:     store(ST)  0,-4(5) 	op: push left
+ 24:     loadConst(LDC)  0,1(0) 	load const
+ 25:     Load(LD)  1,-4(5) 	op: load left
+ 26:     store(ST)  0,0(1) 	assign: store value
+ 27:     Load(LD)  0,-2(5) 	load id value
+ 28:     store(ST)  0,-4(5) 	op: push left
+ 29:     loadConst(LDC)  0,1(0) 	load const
+ 30:     Load(LD)  1,-4(5) 	op: load left
+ 31:     subtract(SUB)  0,1,0 	op >
+ 32:     JGT  0,2(7) 	br if true
+ 33:     loadConst(LDC)  0,0(0) 	false case
+ 34:     loadAddress(LDA)  7,1(7) 	unconditional jmp
+ 35:     loadConst(LDC)  0,1(0) 	true case
+ 37:     loadAddress(LDA)  0,-3(5) 	load id address
+ 38:     store(ST)  0,-4(5) 	op: push left
+ 39:     Load(LD)  0,-3(5) 	load id value
+ 40:     store(ST)  0,-5(5) 	op: push left
+ 41:     Load(LD)  0,-2(5) 	load id value
+ 42:     Load(LD)  1,-5(5) 	op: load left
+ 43:     multiply(MUL)  0,1,0 	op
+ 44:     Load(LD)  1,-4(5) 	op: load left
+ 45:     store(ST)  0,0(1) 	assign: store value
+ 46:     loadAddress(LDA)  0,-2(5) 	load id address
+ 47:     store(ST)  0,-4(5) 	op: push left
+ 48:     Load(LD)  0,-2(5) 	load id value
+ 49:     store(ST)  0,-5(5) 	op: push left
+ 50:     loadConst(LDC)  0,1(0) 	load const
+ 51:     Load(LD)  1,-5(5) 	op: load left
+ 52:     subtract(SUB)  0,1,0 	op -
+ 53:     Load(LD)  1,-4(5) 	op: load left
+ 54:     store(ST)  0,0(1) 	assign: store value
+ 55:     loadAddress(LDA)  7,-29(7) 	while: absolute jmp to test
+ 36:     JumpEqual(JEQ)  0,19(7) 	while: jmp to end
+ 56:     Load(LD)  0,-3(5) 	load id value
+ 57:     store(ST)  0,-6(5) 	store arg val
+ 58:     store(ST)  5,-4(5) 	push ofp
+ 59:     loadAddress(LDA)  5,-4(5) 	push frame
+ 60:     loadAddress(LDA)  0,1(7) 	load ac with ret ptr
+ 61:     loadAddress(LDA)  7,-55(7) 	jump to fun loc
+ 62:     Load(LD)  5,0(5) 	pop frame
+ 63:     Load(LD)  7,-1(5) 	return to caller
+ 11:     loadAddress(LDA)  7,52(7) 	jump around fn body
+ 64:     store(ST)  5,0(5) 	push ofp
+ 65:     loadAddress(LDA)  5,0(5) 	push frame
+ 66:     loadAddress(LDA)  0,1(7) 	load ac with ret ptr
+ 67:     loadAddress(LDA)  7,-56(7) 	jump to main loc
+ 68:     Load(LD)  5,0(5) 	pop frame
+ 69:   HALT  0,0,0 	

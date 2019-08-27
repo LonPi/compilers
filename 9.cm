@@ -1,0 +1,20 @@
+/*
+    Invalid else at line 12
+    Undeclared variable at line 16
+    Empty statement at line 18
+*/
+
+void main(void) {
+  int x; int y;
+  x = input();
+  y = 10;
+  if (x < y){
+    output(x);
+  }elif{
+    output(y);
+  }
+
+  fish = 6;
+
+  if()
+}

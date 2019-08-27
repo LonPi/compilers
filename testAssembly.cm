@@ -1,0 +1,27 @@
+/* A program to compute the factorial value of an input */
+
+int b;
+int z[10];
+
+int testFunc(int i, int x[]){
+	int n;
+	n = x[5] + z[9];
+	return n;
+}
+
+void main(void) {
+  int x; int fac;
+  x = 11;
+  if(x > 10){
+  	output(2);
+  }else{
+  	output(3);
+  }
+  if(x != 11){
+  	output(4);
+  }
+  while(x < 15){
+    output(5);
+    x = x + 1;
+  }
+}

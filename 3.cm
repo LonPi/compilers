@@ -1,0 +1,10 @@
+/* A program to receive input until satisfied */
+
+void main(void) {
+  int x;
+  x = input();
+  while(x < 100){
+    x = input();
+  }
+  output(100);
+}

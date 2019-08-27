@@ -1,0 +1,4 @@
+error line:"+exp.right+": left type does not match right "expLeft.type" != "expRight.type"
+error line:"+exp.right+": "+decleration.func+" already exists
+error line:"+exp.right+": Function "+exp.name+" does not exist
+error line:"+exp.right+": Function "+exp.name+" does not return int

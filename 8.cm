@@ -1,0 +1,12 @@
+/*
+    Out of bound access at line 8
+    Invalid type to evaluate int at line 9
+*/
+
+void main(void) {
+  int x[10]; int y;
+  x[10] = input();
+  if (x < y){
+    output(x);
+  }
+}

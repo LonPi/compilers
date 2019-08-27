@@ -1,0 +1,11 @@
+/* A program to display results depending on input */
+
+void main(void) {
+  int x;
+  x = input();
+  if(x > 10){
+    output(100);
+  }else{
+    output(0);
+  }
+}

@@ -1,0 +1,9 @@
+/* A program to display addition through a function call */
+
+void main(void) {
+  int x; int y;
+  x = 10;
+  y = 20;
+
+  output(x+y);
+}

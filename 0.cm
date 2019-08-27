@@ -1,0 +1,13 @@
+int a; int b;
+
+void main(void) {
+    int 123var; /*var start with numbers*/
+    int abc456; /*var with numbers*/
+
+    if(abc456 == 123var){
+        output(100)
+    }
+
+    cat(fish);  /*unknown function and var*/
+    {{}}    /*test scope level*/
+}
