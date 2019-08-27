@@ -8,12 +8,12 @@ generate an executable program called "tiny".
 
 To test source code like "1.cm", type
 
-`java -classpath /usr/share/java/cup.jar:. CM 1.cm`
+```java -classpath /usr/share/java/cup.jar:. CM 1.cm```
 
 
 To display the syntax tree on the screen, type
 
-`java -classpath /usr/share/java/cup.jar:. CM -a 1.cm`
+```java -classpath /usr/share/java/cup.jar:. CM -a 1.cm```
 
 
 To rebuild the parser, type "make clean" and type "make" again.
