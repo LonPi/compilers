@@ -1,22 +1,24 @@
 A JFlex and Cup implementation for the C- language.
 
-  Note that you may need to modify the classpath in the Makefile so that it
+Note that you may need to modify the classpath in the Makefile so that it
 will point to the directory where "java_cup" is located.
 
-  To build the parser, type "make" in the current directory, which will
+To build the parser, type "make" in the current directory, which will
 generate an executable program called "tiny".
 
-  To test source code like "1.cm", type
+To test source code like "1.cm", type
+```
+java -classpath /usr/share/java/cup.jar:. CM 1.cm
+```
 
-    "java -classpath /usr/share/java/cup.jar:. CM 1.cm"
+To display the syntax tree on the screen, type
+```
+java -classpath /usr/share/java/cup.jar:. CM -a 1.cm
+```
 
-  To display the syntax tree on the screen, type
+To rebuild the parser, type "make clean" and type "make" again.
 
-    "java -classpath /usr/share/java/cup.jar:. CM -a 1.cm"
-
-  To rebuild the parser, type "make clean" and type "make" again.
-
-  For testing purposes, [12345].cm files have been provided.
+For testing purposes, [12345].cm files have been provided.
 
   This assignment has been built upon the references to code provided by
 professor Fei Song. Materials and knowledge gathering has been specified within
